@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="calcCss.css">
+</head>
+<body>
+	<div id="container">
+		<div id='calculator'>
+
+			<table>
+					<tr >
+						<td colspan='4' id="display"></td>
+					</tr>
+					<tr>
+						<td id='AC'>AC</td>
+						<td class='operator notOrange' data-id='negate'>&#177;</td>
+						<td class='operator notOrange' data-id='percent'>%</td>
+						<td class='operator' data-id='divide'>&#247;</td>
+					</tr>
+					<tr>
+						<td class='number' data-id='7'>7</td>
+						<td class='number' data-id='8'>8</td>
+						<td class='number' data-id='9'>9</td>
+						<td class='operator' data-id='multiply'>&times;</td>
+					</tr>
+					<tr>
+						<td class='number' data-id='4'>4</td>
+						<td class='number' data-id='5'>5</td>
+						<td class='number' data-id='6'>6</td>
+						<td class='operator' data-id='minus'>-</td>
+					</tr>
+					<tr>
+						<td class='number' data-id='1'>1</td>
+						<td class='number' data-id='2'>2</td>
+						<td class='number' data-id='3'>3</td>
+						<td class='operator' data-id='add'>+</td>
+					</tr>
+					<tr>
+						<td class='number' colspan='2' data-id='0'>0</td>
+						<td class='number' data-id='.'>.</td>	
+						<td class='operator' data-id='equals'>=</td>
+					</tr>
+			
+			</table>
+		</div>
+	</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="calcJs.js"></script>
+<!-- <script src="calcJs.js"></script> -->
+
+</body>
+</html>

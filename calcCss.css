@@ -1,0 +1,53 @@
+#calculator{
+	margin: 50px auto;
+	width:320px;
+	border: solid black 1px;
+	border-radius: 20px;
+	background-color: grey;
+}
+table {
+	text-align: center;
+	border:black solid 1px;
+	width: 300px;
+	height: 400px;
+	margin: 20px auto;
+	border-collapse: collapse;
+}
+td {
+	border: black solid 1px;
+	margin: ;
+	width: 25%;
+	padding: 0;
+	background-color: #cecccc;
+	font-size: 2em;
+	font-family: existence sans-serif;
+}
+tr {
+	width:100%;
+	margin:0;
+	padding: 0;
+}
+td.notOrange{
+	background-color: #cecccc;
+}
+#display{
+	font-family: 'Lucida Console';
+	font-size:3em;
+	padding-right: 15px;
+	text-align: right;
+	height : 100px;
+	background-color:rgba(7, 6, 6, 0.7);
+	color: white;
+}
+#decPoint {
+	background-color: #f4efef;
+}
+.operator {
+	background-color: orange;
+	color:white;
+	font-size: 2em;
+	font-family: existence sans-serif;
+}
+.number {
+	background-color: #f4efef;
+}
