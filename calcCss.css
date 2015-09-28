@@ -1,20 +1,25 @@
+body{
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Lots_of_math_symbols_and_numbers.svg/600px-Lots_of_math_symbols_and_numbers.svg.png');
+	background-color: rgba(0,0,0,.8);
+	
+}
+
+
 #calculator{
-	margin: 50px auto;
+	margin: 100px auto;
 	width:320px;
 	border: solid black 1px;
 	border-radius: 20px;
 	background-color: grey;
 }
-table {
-	text-align: center;
+table {	text-align: center;
 	border:black solid 1px;
 	width: 300px;
 	height: 400px;
 	margin: 20px auto;
 	border-collapse: collapse;
 }
-td {
-	border: black solid 1px;
+td {	border: black solid 1px;
 	margin: ;
 	width: 25%;
 	padding: 0;
@@ -29,8 +34,10 @@ tr {
 }
 td.notOrange{
 	background-color: #cecccc;
+	color:black;
 }
 #display{
+	
 	font-family: 'Lucida Console';
 	font-size:3em;
 	padding-right: 15px;
