@@ -13,6 +13,8 @@ var $display = $('#display');
 var theCalc = '';
 var changeOperator = false;
 var hasNumberToProcess = false;
+var zeroAllowed =false;
+
 // var doNegate = false;
 
 $display.text(0);
@@ -20,15 +22,24 @@ $display.text(0);
 
 $('.number').click(function(){
 	lastDigitPressed = $(this).data('id');
-	if (lastDigitPressed !== '.' && onDisplayNum.length < 8){
+
+	if (lastDigitPressed !== '.' && lastDigitPressed !== 0 && onDisplayNum.length < 8){
+
 		onDisplayNum = onDisplayNum + lastDigitPressed;
 		$display.text(onDisplayNum);
-	}else if (lastDigitPressed === '.'){
+		zeroAllowed=true;
+	}if (lastDigitPressed === '.'){
 		onDisplayNum = decimalDotAlreadyUsed ? onDisplayNum : onDisplayNum + '.';
+		if (onDisplayNum === '.'){
+			onDisplayNum = '0.'
+		}
 		decimalDotAlreadyUsed = true;
 		$display.text(onDisplayNum);
+		zeroAllowed=true;
+	}if (lastDigitPressed === 0 && zeroAllowed){
+		onDisplayNum = onDisplayNum + lastDigitPressed;
+		$display.text(onDisplayNum);
 	}
-
 	changeOperator =true;
 	hasNumberToProcess =true;
 	console.log(numArr)
@@ -49,9 +60,10 @@ $('.otherOperator').click(function(){
 })
 
 $('.operator').click(function(){
+	zeroAllowed = false;
 		operator = $(this).data('id')
 
-		if (changeOperator){
+		if (changeOperator && numArr.length < 2){
 			numArr.push(parseFloat(onDisplayNum));
 
 			changeOperator=false;
@@ -123,6 +135,7 @@ $('.operator').click(function(){
 		changeOperator = false;
 		num1=0;
 		$display.text(0);
+		zeroAllowed = false;
  		
 	});
 }
